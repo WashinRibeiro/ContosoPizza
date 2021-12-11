@@ -5,11 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace ContosoPizza.Controllers
+namespace ContosoPizza.Controllers 
 {
     [ApiController]
+    // [ApiController] habilita comportamentos dogmáticos que facilitam a criação de APIs Web. Alguns comportamentos incluem inferência de fonte de parâmetro, roteamento de atributo como um requisito e aprimoramentos de tratamento de erro de validação de modelo.
+
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    // [Route] define o padrão de roteamento [controller]. O token [controller] é substituído pelo nome do controlador
+    
+    public class WeatherForecastController : ControllerBase // Nossa classe base herda da classe ControllerBase que fornece diversas            funcionalidades padrão para manipular solicitação HTTP
     {
         private static readonly string[] Summaries = new[]
         {
